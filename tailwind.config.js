@@ -4,10 +4,12 @@ export default {
   theme: {
     colors: {
       Background: '#050505',
+      BackgroundLight: '#FFFFFF',
       Primary: '#8B8D8F',
       Secondary: '#343434',
       'Secondary-Dark': '#0E0E0E',
       'Text-Custom': '#BBBBBB',
+      'Text-Custom-Light': '#555555',
       'White-Custom': '#FAFAFA',
     },
 
@@ -17,4 +19,4 @@ export default {
     extend: {},
   },
   plugins: [],
-};
+}
