@@ -1,5 +1,6 @@
 import { ThemeContext } from '../context/ThemeContext'
 import { useContext } from 'react'
+import { Tools } from './Tools'
 
 export const MainLayout: React.FC = () => {
   const { darkTheme } = useContext(ThemeContext)
@@ -35,6 +36,7 @@ export const MainLayout: React.FC = () => {
           ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
         </p>
       </div>
+      <Tools />
     </>
   )
 }

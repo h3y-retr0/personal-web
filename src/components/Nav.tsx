@@ -10,30 +10,25 @@ export const Nav: React.FC = () => {
   const { darkTheme } = useContext(ThemeContext)
   return (
     <div className='hidden w-full max-h-[100px] h-[100px] xl:flex items-center justify-between text-[17.5px] font-semibold text-Primary leading-[normal]'>
-      <Link href='/' className='hover:text-White-Custom'>
+      <Link href='/' className='hover:text-White-Custom ease-in duration-300'>
         Jorge Gómez
       </Link>
 
       <div className='flex items-center gap-x-6'>
         <Link
-          href='/projects'
-          className={`hover:text-White-Custom ${
-            location === '/projects' && 'text-White-Custom'
+          href='/projects/personal'
+          className={`hover:text-White-Custom ease-in duration-300 ${
+            (location === '/projects/personal' ||
+              location === '/projects/other') &&
+            'text-White-Custom'
           }`}
         >
           Projects
         </Link>
-        <Link
-          href='/tools'
-          className={`hover:text-White-Custom ${
-            location === '/tools' && 'text-White-Custom'
-          }`}
-        >
-          Tools
-        </Link>
+
         <Link
           href='/contact'
-          className={`hover:text-White-Custom  ${
+          className={`hover:text-White-Custom ease-in duration-300  ${
             location === '/contact' && 'text-White-Custom'
           }`}
         >

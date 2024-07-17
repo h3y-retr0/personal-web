@@ -16,7 +16,17 @@ export default {
     fontFamily: {
       inter: ['Inter', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        'border-width': {
+          from: { width: '10px', opacity: '0' },
+          to: { width: '100px', opacity: '1' },
+        },
+      },
+      animation: {
+        'border-width': 'border-width 3s alternate infinite',
+      },
+    },
   },
   plugins: [],
 }
