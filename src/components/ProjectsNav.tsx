@@ -3,27 +3,27 @@ import { Link, useLocation } from 'wouter'
 
 export const ProjectsNav: React.FC = () => {
   const [location] = useLocation()
-  const [underlineStyle, setUnderlineStyle] = useState<React.CSSProperties>({})
+  // const [underlineStyle, setUnderlineStyle] = useState<React.CSSProperties>({})
 
-  useEffect(() => {
-    const updateUnderline = () => {
-      let selectedLink = document.querySelector<HTMLElement>('.nav-link.active')
+  // useEffect(() => {
+  //   const updateUnderline = () => {
+  //     let selectedLink = document.querySelector<HTMLElement>('.nav-link.active')
 
-      if (selectedLink) {
-        const { offsetLeft, offsetWidth } = selectedLink
+  //     if (selectedLink) {
+  //       const { offsetLeft, offsetWidth } = selectedLink
 
-        setUnderlineStyle({
-          width: `${offsetWidth}px`,
-          left: `${offsetLeft}px`,
-        })
-      }
-    }
-    updateUnderline()
-    window.addEventListener('resize', updateUnderline)
-    return () => {
-      window.removeEventListener('resize', updateUnderline)
-    }
-  }, [location])
+  //       setUnderlineStyle({
+  //         width: `${offsetWidth}px`,
+  //         left: `${offsetLeft}px`,
+  //       })
+  //     }
+  //   }
+  //   updateUnderline()
+  //   window.addEventListener('resize', updateUnderline)
+  //   return () => {
+  //     window.removeEventListener('resize', updateUnderline)
+  //   }
+  // }, [location])
 
   return (
     <div className='relative w-full flex justify-center text-[23px] font-medium text-Primary leading-[normal] gap-x-8'>
@@ -44,10 +44,10 @@ export const ProjectsNav: React.FC = () => {
         Other
       </Link>
 
-      <div
+      {/* <div
         className='absolute pt-[2px] bottom-0 h-0.5 bg-white transition-all duration-300 bg-White-Custom'
         style={underlineStyle}
-      ></div>
+      ></div> */}
     </div>
   )
 }

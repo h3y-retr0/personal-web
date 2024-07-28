@@ -7,13 +7,14 @@ import { ProjectsNav } from './components/ProjectsNav'
 import { NotFound } from './components/common/NotFound'
 import { Contact } from './components/Contact'
 import { Projects } from './components/Projects'
+import { FeatProjects } from './components/FeatProjects'
 
 function App() {
   const { darkTheme } = useContext(ThemeContext)
 
   return (
     <main
-      className={`font-inter h-screen w-screen ${
+      className={`font-inter min-h-screen ${
         darkTheme
           ? 'bg-Background text-White-Custom'
           : 'bg-BackgroundLight text-Secondary-Dark'
@@ -36,8 +37,9 @@ function App() {
             </div>
           </Route>
           <Route path='/projects/other'>
-            <div className='pt-[30px]'>
+            <div className='max-w-sm md:max-w-xl lg:max-w-5xl xl:max-w-5xl w-full mx-auto pt-[30px]'>
               <ProjectsNav />
+              <FeatProjects />
             </div>
           </Route>
           <Route path='/contact'>

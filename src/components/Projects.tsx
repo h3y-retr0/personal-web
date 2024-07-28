@@ -25,7 +25,7 @@ export const Projects: React.FC = () => {
     }
   }
   useEffect(() => {
-    fetchGitData().then((data) => setData(data))
+    fetchGitData().then(data => setData(data))
   }, [])
 
   return (
@@ -40,7 +40,7 @@ export const Projects: React.FC = () => {
         transition={{ type: 'spring', stiffness: 800, damping: 500 }}
         className='grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4 gap-y-8 pb-20 pt-[55px]'
       >
-        {data?.map((i) => (
+        {data?.map(i => (
           <Card
             key={i.id}
             name={i.name}
