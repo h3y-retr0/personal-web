@@ -22,9 +22,13 @@ export default {
           from: { width: '10px', opacity: '0' },
           to: { width: '100px', opacity: '1' },
         },
+        'push-word': {
+          from: {},
+        },
       },
       animation: {
         'border-width': 'border-width 3s alternate infinite',
+        'push-word': 'transform 0.3s ease-in-out 0s',
       },
     },
   },
