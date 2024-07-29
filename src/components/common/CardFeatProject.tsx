@@ -29,19 +29,19 @@ export const CardFeatProject: React.FC<cardFeatProjectProps> = ({
   return (
     <motion.div
       variants={itemForMotion}
-      className='relative h-[430px] w-[80%] max-w-[950px]'
+      className='relative h-[630px] w-[95%] lg:h-[430px] lg:w-[80%] max-w-[950px]'
     >
       <div className='absolute top-0 flex justify-center w-full'>
         <div className='left-0 h-[1px] animate-border-width rounded-full bg-gradient-to-r from-[rgba(17,17,17,0)] via-[#FFFFFF] to-[rgba(17,17,17,0)] transition-all duration-1000'></div>
       </div>
 
-      <div className='flex flex h-full items-start px-8 pb-4 justify-center  border border-solid border-[#1e293b] bg-[#000000]'>
-        <div className='h-full w-[60%] absolute left-0 flex justify-center items-center'>
+      <div className='flex flex-col lg:flex-row h-full border border-solid border-[#1e293b] bg-[#000000]'>
+        <div className='w-[100%] lg:w-[55%] h-full flex justify-center items-center'>
           <img src={imgSrc} className='w-[90%] rounded-md' />
         </div>
-        <div className='h-full w-[40%] absolute right-0'>
+        <div className='w-[100%] lg:w-[45%] h-full'>
           <div className='p-[35px]'>
-            <span className='flex gap-x-1'>
+            <span className='flex justify-center lg:justify-normal gap-x-1'>
               <span className='text-[30px] font-semibold text-White-Custom'>
                 {name}
               </span>
@@ -70,7 +70,7 @@ export const CardFeatProject: React.FC<cardFeatProjectProps> = ({
             <></>
           )}
           <div className='flex gap-x-4 justify-center pt-[10px]'>
-            {children}
+            {children} {/* Icons for used technologies */}
           </div>
         </div>
       </div>

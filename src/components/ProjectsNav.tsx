@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'wouter'
 
 export const ProjectsNav: React.FC = () => {

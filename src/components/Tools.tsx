@@ -22,7 +22,7 @@ export const Tools: React.FC = () => {
       <h2 className='text-[36px] font-semibold pt-[16px]'>Tools I Use</h2>
       <div className='relative flex flex-wrap pt-[5px] z-0'>
         <div className='absolute text-transparent w-full h-[60px] bg-[#FFFFFF] blur-3xl rounded-full  opacity-10  z-0'></div>
-        <IconContext.Provider value={{ size: '40px' }}>
+        <IconContext.Provider value={{ size: '36px' }}>
           <span className='p-[8px]'>
             <FaReact title='React' />
           </span>

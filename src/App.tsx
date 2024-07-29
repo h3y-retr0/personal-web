@@ -8,6 +8,7 @@ import { NotFound } from './components/common/NotFound'
 import { Contact } from './components/Contact'
 import { Projects } from './components/Projects'
 import { FeatProjects } from './components/FeatProjects'
+import { NavMobile } from './components/NavMobile'
 
 function App() {
   const { darkTheme } = useContext(ThemeContext)
@@ -23,6 +24,7 @@ function App() {
       <div>
         <div className='max-w-sm md:max-w-xl lg:max-w-3xl w-full mx-auto xl:pt-[40px] pt-[80px]'>
           <Nav />
+          <NavMobile />
         </div>
         <Switch>
           <Route path='/'>
@@ -43,7 +45,9 @@ function App() {
             </div>
           </Route>
           <Route path='/contact'>
-            <Contact />
+            <div className='max-w-sm md:max-w-xl lg:max-w-3xl w-full mx-auto xl:pt-[40px] pt-[80px]'>
+              <Contact />
+            </div>
           </Route>
           <Route>
             <NotFound />
