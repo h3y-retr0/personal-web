@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Card } from './common/Card'
 import { motion } from 'framer-motion'
+import { ThemeContext } from '../context/ThemeContext'
 const BASE_URL = 'https://api.github.com/users/h3y-retr0/repos'
 
 interface gitHubData {
@@ -12,6 +13,7 @@ interface gitHubData {
 
 export const Projects: React.FC = () => {
   const [data, setData] = useState<gitHubData[]>([])
+  const { darkTheme } = useContext(ThemeContext)
 
   const fetchGitData = async () => {
     try {
@@ -31,7 +33,11 @@ export const Projects: React.FC = () => {
   return (
     <>
       <div className='flex justify-center pt-[15px]'>
-        <span className='italic text-[17px] text-Text-Custom'>
+        <span
+          className={`italic text-[17px] ${
+            darkTheme ? 'text-Text-Custom' : 'text-Text-Custom-Light'
+          }`}
+        >
           A collection of my personal projects
         </span>
       </div>

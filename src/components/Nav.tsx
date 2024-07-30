@@ -8,19 +8,29 @@ import { useContext } from 'react'
 export const Nav: React.FC = () => {
   const [location] = useLocation()
   const { darkTheme } = useContext(ThemeContext)
+
   return (
     <div className='hidden w-full max-h-[100px] h-[100px] xl:flex items-center justify-between text-[17.5px] font-semibold text-Primary leading-[normal]'>
-      <Link href='/' className='hover:text-White-Custom ease-in duration-300'>
+      <Link
+        href='/'
+        className={`ease-in duration-300 ${
+          darkTheme ? 'hover:text-White-Custom' : 'hover:text-[black]'
+        }`}
+      >
         Jorge Gómez
       </Link>
 
       <div className='flex items-center gap-x-6'>
         <Link
           href='/projects/personal'
-          className={`hover:text-White-Custom ease-in duration-300 ${
-            (location === '/projects/personal' ||
-              location === '/projects/other') &&
-            'text-White-Custom'
+          className={`ease-in duration-300 hover:${
+            darkTheme ? 'text-White-Custom' : 'text-[black]'
+          } ${
+            location === '/projects/personal' || location === '/projects/other'
+              ? darkTheme
+                ? 'text-White-Custom'
+                : 'text-[black]'
+              : ''
           }`}
         >
           Projects
@@ -28,8 +38,14 @@ export const Nav: React.FC = () => {
 
         <Link
           href='/contact'
-          className={`hover:text-White-Custom ease-in duration-300  ${
-            location === '/contact' && 'text-White-Custom'
+          className={`ease-in duration-300 hover:${
+            darkTheme ? 'text-White-Custom' : 'text-[black]'
+          } ${
+            location === '/contact'
+              ? darkTheme
+                ? 'text-White-Custom'
+                : 'text-[black]'
+              : ''
           }`}
         >
           Contact
@@ -38,10 +54,12 @@ export const Nav: React.FC = () => {
         <IconLink
           href='https://github.com/h3y-retr0'
           title='github'
-          icon={<Github size={19} color='#8B8D8F' />}
+          icon={
+            <Github size={19} color={`${darkTheme ? '#8B8D8F' : '#000000'}`} />
+          }
         />
 
-        <ThemeSwitcher />
+        <ThemeSwitcher color={`${darkTheme ? '#8B8D8F' : '#000000'}`} />
       </div>
     </div>
   )

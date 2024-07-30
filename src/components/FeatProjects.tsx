@@ -3,12 +3,19 @@ import { CardFeatProject } from './common/CardFeatProject'
 import { motion } from 'framer-motion'
 import { IconContext } from 'react-icons'
 import { IoLogoElectron } from 'react-icons/io5'
+import { useContext } from 'react'
+import { ThemeContext } from '../context/ThemeContext'
 
 export const FeatProjects: React.FC = () => {
+  const { darkTheme } = useContext(ThemeContext)
   return (
     <>
       <div className='flex justify-center pt-[15px]'>
-        <span className='italic text-[17px] text-Text-Custom'>
+        <span
+          className={`italic text-[17px] ${
+            darkTheme ? 'text-Text-Custom' : 'text-Text-Custom-Light'
+          }`}
+        >
           Some featured projects I have worked on
         </span>
       </div>
@@ -28,7 +35,7 @@ export const FeatProjects: React.FC = () => {
           companyLink='http://colectivocinetica.es'
         >
           <IconContext.Provider value={{ size: '35px' }}>
-            <FaReact title='React' />
+            <FaReact title='ReactJS' />
             <IoLogoElectron title='ElectronJS' />
             <FaHtml5 title='Html' />
             <FaCss3Alt title='Css' />

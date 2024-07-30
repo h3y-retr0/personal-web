@@ -1,6 +1,10 @@
 import { ArrowUpRight } from 'lucide-react'
+import { useContext } from 'react'
+import { ThemeContext } from '../context/ThemeContext'
 
 export const Contact: React.FC = () => {
+  const { darkTheme } = useContext(ThemeContext)
+
   return (
     <>
       <div className='flex flex-col items-center justify-center border-b border-t border-[#1e293b] pt-1  '>
@@ -27,7 +31,11 @@ export const Contact: React.FC = () => {
         </div>
         <ArrowUpRight size={25} className='mb-6' />
       </div>
-      <p className='flex justify-center text-Text-Custom mt-2'>
+      <p
+        className={`text-center mt-2 ${
+          darkTheme ? 'text-Text-Custom' : 'text-Text-Custom-Light'
+        }`}
+      >
         Don't be afraid to contact me on any regards !
       </p>
     </>

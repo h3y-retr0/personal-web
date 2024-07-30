@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
+import { useContext } from 'react'
+import { ThemeContext } from '../../context/ThemeContext'
 
 interface cardProps {
   name: string
@@ -8,6 +10,8 @@ interface cardProps {
 }
 
 export const Card: React.FC<cardProps> = ({ name, description, url }) => {
+  const { darkTheme } = useContext(ThemeContext)
+
   const itemForMotion = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -21,7 +25,10 @@ export const Card: React.FC<cardProps> = ({ name, description, url }) => {
         <div className='left-0 h-[1px] animate-border-width rounded-full bg-gradient-to-r from-[rgba(17,17,17,0)] via-[#FFFFFF] to-[rgba(17,17,17,0)] transition-all duration-1000'></div>
       </div>
 
-      <div className='flex flex-col h-full items-start px-8 pb-4 justify-center  border border-solid border-[#1e293b] bg-[#000000]'>
+      <div
+        className={`flex flex-col h-full items-start px-8 pb-4 justify-center  border border-solid border-[#1e293b] 
+          ${darkTheme ? 'bg-[#000000]' : 'bg-[#FFFFFF]'}`}
+      >
         <a
           href={url}
           className='flex items-center justify-between w-full underline-transparent'
@@ -29,11 +36,24 @@ export const Card: React.FC<cardProps> = ({ name, description, url }) => {
           rel='noopener'
         >
           <span className='flex gap-x-1'>
-            <span className='text-md text-White-Custom'>{name}</span>
-            <ArrowUpRight color='#BBBBBB' size={12} />
+            <span
+              className={`text-md ${
+                darkTheme ? 'text-White-Custom' : 'text-Text-Custom-Light'
+              }`}
+            >
+              {name}
+            </span>
+            <ArrowUpRight
+              color={`${darkTheme ? '#BBBBBB' : '#000000'}`}
+              size={12}
+            />
           </span>
         </a>
-        <span className='text-[13px] text-Text-Custom pt-[15px]'>
+        <span
+          className={`text-[13px] ${
+            darkTheme ? 'text-Text-Custom' : 'text-Text-Custom-Light'
+          } pt-[15px]`}
+        >
           {description}
         </span>
       </div>
