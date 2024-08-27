@@ -12,6 +12,7 @@ export const NavMobile: React.FC = () => {
   const toggleMenu = () => {
     setOpened(op => !op)
   }
+
   return (
     <div className='relative justify-between min-h-[100px] h-[100px] flex xl:hidden items-center text-[16px] font-semibold text-Primary'>
       <div className='w-full flex items-center justify-between px-4'>

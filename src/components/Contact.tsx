@@ -1,6 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import { useContext } from 'react'
 import { ThemeContext } from '../context/ThemeContext'
+import { motion } from 'framer-motion'
 
 export const Contact: React.FC = () => {
   const { darkTheme } = useContext(ThemeContext)
@@ -15,18 +16,23 @@ export const Contact: React.FC = () => {
           drop me
         </a>
         <div className='uppercase text-bold text-[8vw] cursor-default flex'>
-          <span className='relative'>
+          <span className='relative flex flex-row gap-x-4'>
             an
-            <span>
-              {/* <span> email</span> */}
-              <a
-                // className='absolute right-0  top-[70%]'
-                href='mailto:jgr.espiga@protonmail.com'
+            <a href='mailto:jgr.espiga@protonmail.com'>
+              <span
+                className={`relative ${
+                  darkTheme ? 'text-Text-Custom' : 'text-Text-Custom-Light'
+                }`}
               >
-                {' '}
                 email
-              </a>
-            </span>
+              </span>
+              <motion.div
+                className='absolute top-0 flex'
+                whileHover={{ scale: 0.6, opacity: 0 }}
+              >
+                email
+              </motion.div>
+            </a>
           </span>
         </div>
         <ArrowUpRight size={25} className='mb-6' />

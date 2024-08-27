@@ -46,7 +46,7 @@ export const CardFeatProject: React.FC<cardFeatProjectProps> = ({
         <div className='w-[100%] lg:w-[55%] h-full flex justify-center items-center'>
           <img src={imgSrc} className='w-[95%] rounded-md' />
         </div>
-        <div className='w-[100%] lg:w-[45%] h-full'>
+        <div className='w-[100%] lg:w-[45%] h-full text-justify'>
           <div className='p-[35px]'>
             <span className='flex justify-center lg:justify-normal gap-x-1'>
               <span
@@ -59,7 +59,7 @@ export const CardFeatProject: React.FC<cardFeatProjectProps> = ({
             </span>
 
             <span
-              className={`text-[16px] ${
+              className={`text-[15px] ${
                 darkTheme ? 'text-Text-Custom' : 'text-Text-Custom-Light'
               } pt-[30px]`}
             >

@@ -14,26 +14,25 @@ export const MainLayout: React.FC = () => {
           darkTheme ? 'text-Text-Custom' : 'text-Text-Custom-Light'
         } `}
       >
-        <p>Hi, I'm Jorge Gómez, a full stack developer</p>
+        <p>Hi, I'm Jorge Gómez, a passionate developer from Spain!</p>
 
         <p>
-          Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-          archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de
-          las industrias desde el año 1500, cuando un impresor (N. del T.
-          persona que se dedica a la imprenta)
+          I'm currently studying Computer Engineering at the University Carlos
+          III in Madrid, with a strong focus on web development, especially on
+          the front-end side. Over the past few years, I have completed several
+          courses and earned certifications in this field, gaining both
+          foundational knowledge and advanced skills.
         </p>
         <p>
-          desconocido usó una galería de textos y los mezcló de tal manera que
-          logró hacer un libro de textos especimen. No sólo sobrevivió 500 años,
-          sino que tambien ingresó como texto de relleno en documentos
-          electrónicos, quedando esencialmente igual al original. Fue
-          popularizado en los 60s con
+          My passion for technology drives me to continuously learn and take on
+          new challenges, and I genuinely enjoy dedicating time and effort to
+          projects that excite me.
         </p>
 
         <p>
-          la creación de las hojas "Letraset", las cuales contenian pasajes de
-          Lorem Ipsum, y más recientemente con software de autoedición, como por
-          ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+          As a side note, besides my passion for technology, I'm a very active
+          person who loves sports. In my free time, I enjoy going to the gym,
+          swimming, running, among other activities.
         </p>
       </div>
       <Tools />

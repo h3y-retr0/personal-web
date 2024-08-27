@@ -26,10 +26,10 @@ export const FeatProjects: React.FC = () => {
       >
         <CardFeatProject
           name='Rulética'
-          description='Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-          archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de
-          las industrias desde el año 1500, cuando un impresor (N. del T.
-          persona que se dedica a la imprenta)'
+          description='Rulética is an app designed for educational purposes.
+            It functions as a roulette that you can use to create cooperative groups within your class with the ability to subtly control where the arrow lands by clicking on your desired spot,
+            without students noticing.
+            It is a cross-platform desktop app developed with Electron.'
           imgSrc='/projectImgs/ruletica.png'
           company='Colectivo Cinética'
           companyLink='http://colectivocinetica.es'
