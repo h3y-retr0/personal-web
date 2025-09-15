@@ -7,12 +7,7 @@ import {
   FaReact,
 } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import {
-  SiAdobephotoshop,
-  SiExpress,
-  SiTypescript,
-  SiMysql,
-} from "react-icons/si";
+import { SiExpress, SiTypescript, SiMysql } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
 
